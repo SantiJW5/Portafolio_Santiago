@@ -148,10 +148,12 @@
     .grid-2{display:grid; gap:16px; grid-template-columns: 1.1fr .9fr}
     @media (max-width: 880px){ .grid-2{grid-template-columns:1fr} }
 
-    /* ======= Ajustes Responsive <= 480px ======= */
+    /*  Ajustes Responsive <= 480px  */
     @media (max-width: 480px){
       .nav{flex-wrap:wrap}
-      .nav nav{display:flex; gap:6px; flex-wrap:wrap}
+      .nav nav{display:flex; 
+                gap:6px; 
+                flex-wrap:wrap}
       .nav a.link{padding:6px 8px; font-size:14px}
       .hero{padding:36px 0 20px}
       .hero h1{font-size:clamp(24px, 6vw, 34px)}
@@ -169,7 +171,7 @@
       .project .content{padding:12px}
     }
 
-    /* ======= Ajustes Responsive estrictos <= 400px ======= */
+    /* Ajustes Responsive estrictos <= 400px para iphone (mi telefono xd)*/
     @media (max-width: 400px){
       .container{width:94%}
       .nav{gap:6px}
@@ -200,7 +202,7 @@
 
   <main class="container">
     <section class="hero">
-      <span class="chip">💻 Desarrollador Web & Mobile</span>
+      <span class="chip">Desarrollador Web & Mobile</span>
       <h1>Hola, soy <span style="color:#cfd4ff">Santiago Avendaño Via</span>.<br> Construyo interfaces limpias, rápidas y accesibles.</h1>
       <p>Front-end con enfoque en rendimiento, UI/UX y componentes reutilizables.</p>
     </section>
@@ -209,8 +211,7 @@
       <div class="card" style="padding:18px;">
         <h2>Sobre mí</h2>
         <p class="text">
-          Aquí un breve resumen: años de experiencia, enfoque, y lo que te diferencia.
-          Por ejemplo: “Me especializo en crear SPA responsivas con React y Vite,
+          Me especializo en crear paginas o sitios web responsivas con React, Vite o html con css y javascript
           integrando buenas prácticas, testing básico y un diseño consistente.”
         </p>
       </div>
@@ -246,16 +247,16 @@
         <!-- Proyecto 1 -->
         <article class="project card">
           <div class="thumb">
-            <img src="https://picsum.photos/seed/proyecto1/800/450" alt="Miniatura Proyecto 1">
+            <img src="/img/calculadora.png" alt="Miniatura Proyecto 1">
           </div>
           <div class="content">
-            <h3 style="margin:0">Landing Animada</h3>
-            <p style="margin:0; color:#cbd2e4">Landing page con animaciones sutiles y sección de precios.</p>
+            <h3 style="margin:0">Calculadora simple</h3>
+            <p style="margin:0; color:#cbd2e4">Una calculadora simple hecha con mis pocos conocimientos en informatica.</p>
             <div class="tags">
               <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
             </div>
             <div class="actions">
-              <a class="btn-primary" href="#" target="_blank" rel="noopener">Ver</a>
+              <a class="btn-primary" href="https://calculadora-beta-khaki.vercel.app/" target="_blank" rel="noopener">Ver</a>
             </div>
           </div>
         </article>
@@ -263,16 +264,16 @@
         <!-- Proyecto 2 -->
         <article class="project card">
           <div class="thumb">
-            <img src="https://picsum.photos/seed/proyecto2/800/450" alt="Miniatura Proyecto 2">
+            <img src="/img/restaurante.png" alt="Miniatura Proyecto 2">
           </div>
           <div class="content">
-            <h3 style="margin:0">Dashboard Responsive</h3>
-            <p style="margin:0; color:#cbd2e4">Panel con tarjetas, gráfico y tabla filtrable.</p>
+            <h3 style="margin:0">Restaurante Ficticio</h3>
+            <p style="margin:0; color:#cbd2e4">Un restaurante de pizzas, hamburguesasm etc. Todo es ficticio y de practica</p>
             <div class="tags">
-              <span class="tag">Vite</span><span class="tag">React</span><span class="tag">TypeScript</span>
+              <span class="tag">HTML</span><span class="tag">CSS</span>
             </div>
             <div class="actions">
-              <a class="btn-primary" href="#" target="_blank" rel="noopener">Ver</a>
+              <a class="btn-primary" href="https://restaurante-ficticio.vercel.app/" target="_blank" rel="noopener">Ver</a>
             </div>
           </div>
         </article>
