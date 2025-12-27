@@ -6,207 +6,7 @@
   <title>Portafolio — Santiago</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f1221;
-      --card:#141832;
-      --muted:#9aa3b2;
-      --text:#e9ecf1;
-      --brand:#36218d;
-      --brand-2:#a200ff;
-      --ring: 0 0 0 3px rgba(124,92,255,.25);
-      --radius:18px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(124,92,255,.15), transparent 60%),
-                  radial-gradient(1000px 800px at 10% 10%, rgba(65,209,255,.12), transparent 60%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.5;
-      background-attachment: fixed;
-    }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    .container{width:min(1100px, 92%); margin-inline:auto}
-    header{
-      position:sticky; 
-      top:0; 
-      z-index:50; 
-      backdrop-filter: blur(8px);
-      background: linear-gradient(180deg, rgba(15,18,33,.9), rgba(15,18,33,.6));
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between; padding:14px 0;
-      gap:8px;
-    }
-    .brand{
-      display:flex; gap:10px; align-items:center; font-weight:800; letter-spacing:.3px;
-    }
-    .nav a.link{
-      opacity:.85; padding:8px 10px; 
-      border-radius:10px}
-      
-    .nav a.link:hover{
-      background:rgba(255,255,255,.06); 
-      opacity:1}
-
-    .hero{
-      padding:60px 0 30px;
-      display:grid; gap:16px;
-    }
-    .hero h1{font-size:clamp(28px, 4vw, 44px); line-height:1.1; margin:0}
-    .hero p{color:var(--muted); margin:0}
-    .chip{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:8px 12px; border-radius:999px; font-size:14px; color:#dfe5ff;
-      background:linear-gradient(135deg, rgba(124,92,255,.18), rgba(65,209,255,.18));
-      border:1px solid rgba(124,92,255,.35);
-    }
-
-    section{padding:28px 0}
-    section h2{
-      font-size:clamp(20px, 3vw, 28px);
-      margin:0 0 16px; letter-spacing:.2px;
-    }
-    .card{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:var(--radius);
-      box-shadow:0 10px 40px rgba(0,0,0,.25);
-      transition: 0.2s ease-in-out;
-    }
-    .card:hover{
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.438);
-      transform: scale(1.01);
-    }
-
-    /* Sobre mí */
-    .about{display:grid; gap:14px}
-    .about .text{color:#d9deea}
-
-    /* Contacto & Redes */
-    .socials{display:flex; flex-wrap:wrap; gap:10px}
-    .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 14px; border-radius:12px; font-weight:600;
-      background:#1a1f3e; border:1px solid rgba(255,255,255,.08);
-      transition:0.1s ease-in-out;
-    }
-    .btn:hover{box-shadow: 0 0 10px rgb(44, 241, 241);}
-    .btn svg{width:18px; height:18px}
-
-    /* Habilidades */
-    .skills{
-      display:flex; flex-wrap:wrap; gap:14px;
-    }
-    .skill{
-      display:flex; align-items:center; gap:10px;
-      padding:10px 12px; border-radius:14px; background:#161a34;
-      border:1px solid rgba(255,255,255,.06);
-    }
-    .skill img{
-      width:28px; height:28px; object-fit:contain; border-radius:6px; background:#0f1221;
-      padding:4px; border:1px solid rgba(255,255,255,.05);
-    }
-    .skill span{font-size:14px}
-
-    /* Proyectos */
-    .projects{
-      display:grid; gap:16px;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-    .project{
-      display:flex; flex-direction:column; overflow:hidden;
-      transition:transform .2s ease, box-shadow .2s ease;
-    }
-    .project:hover{
-      transform:translateY(-4px);
-      box-shadow:0 14px 50px rgba(124,92,255,.2);
-    }
-    .project .thumb{
-      aspect-ratio:16/9; background:#0b0e1e; overflow:hidden;
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .project .thumb img{width:100%; height:100%; object-fit:cover; filter:saturate(1.05)}
-    .project .content{padding:14px 14px 16px; display:grid; gap:10px}
-    .tags{display:flex; flex-wrap:wrap; gap:8px}
-    .tag{
-      font-size:12px; padding:6px 9px; border-radius:999px;
-      background:rgba(124,92,255,.15); border:1px solid rgba(124,92,255,.35); color:#dfe5ff;
-    }
-    .project .actions{margin-top:4px}
-    .btn-primary{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:12px; font-weight:700;
-      background:linear-gradient(135deg, var(--brand), var(--brand-2));
-      color:white; border:none;
-      width:100%;
-    }
-    .btn-primary:hover{filter:brightness(1.08)}
-    .actions{
-      display:inline-flex; align-items:center; justify-content:center;
-    }
-
-    footer{
-      padding:24px 0 50px; color:var(--muted); font-size:14px; text-align:center;
-    }
-
-    /* Utilidades */
-    .grid-2{display:grid; gap:16px; grid-template-columns: 1.1fr .9fr}
-    @media (max-width: 880px){ .grid-2{grid-template-columns:1fr} }
-
-    /*  Ajustes Responsive <= 480px  */
-    @media (max-width: 480px){
-      .nav{flex-wrap:wrap}
-      .nav nav{display:flex; 
-                gap:10px; 
-                flex-wrap:wrap}
-      .nav a.link{padding:6px 8px; font-size:14px}
-      .hero{padding:36px 0 20px}
-      .hero h1{font-size:clamp(24px, 6vw, 34px)}
-      .chip{font-size:12px; padding:6px 10px}
-      section{padding:22px 0}
-      .skills{gap:10px}
-      .skill{padding:8px 10px; gap:8px}
-      .skill img{width:24px;height:24px}
-      .skill span{font-size:13px}
-      .projects{
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap:14px;
-      }
-      .btn{padding:8px 12px; font-size:14px}
-      .project .content{padding:12px}
-      .card{
-       display: flex;
-       flex-direction: column; 
-       justify-content: center;
-       align-items: center;
-      }
-    }
-
-    /* Ajustes Responsive estrictos <= 400px para iphone (mi telefono xd)*/
-    @media (max-width: 400px){
-      .container{width:94%}
-      .nav{gap:6px}
-      .nav nav{width:100%}
-      .nav a.link{padding:6px 8px; font-size:13px}
-      .hero h1{font-size:clamp(22px, 7vw, 30px)}
-      section h2{font-size:clamp(18px, 5.5vw, 24px)}
-      .projects{grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))}
-      .btn, .btn-primary{padding:9px 12px; font-size:14px}
-      .tag{font-size:11px; padding:5px 8px}
-      
-    }
-  </style>
+  <link rel="stylesheet" href="portafolio.css">
 </head>
 <body>
   <header>
@@ -256,14 +56,16 @@
     <section id="habilidades">
       <h2>Habilidades</h2>
       <div class="skills">
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><span>HTML</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><span>CSS</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
-        <div class="skill"><img src="https://vitejs.dev/logo.svg" alt="Vite"><span>Vite</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native"><span>React Native</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"><span>TypeScript</span></div>
+        <div class="skill"><img src="/img/html.png" alt="HTML"><span>HTML</span></div>
+        <div class="skill"><img src="/img/css.png" alt="CSS"><span>CSS</span></div>
+        <div class="skill"><img src="/img/js.png" alt="JavaScript"><span>JavaScript</span></div>
+        <div class="skill"><img src="/img/vite.png" alt="Vite"><span>Vite</span></div>
+        <div class="skill"><img src="/img/bootstrap.png" alt="Bootstrap"><span>Bootstrap</span></div>
+        <div class="skill"><img src="/img/react.png" alt="React"><span>React</span></div>
+        <div class="skill"><img src="/img/react.png" alt="React Native"><span>React Native</span></div>
+        <div class="skill"><img src="/img/Typescript.png" alt="TypeScript"><span>TypeScript</span></div>
+        <div class="skill"><img src="/img/jquery.png" alt="TypeScript"><span>jQuery</span></div>
+        <div class="skill"><img src="/img/taildwind.png" alt="TypeScript"><span>Taildwind</span></div>
       </div>
     </section>
 
