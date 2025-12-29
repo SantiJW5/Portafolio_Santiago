@@ -24,6 +24,9 @@
     img{max-width:100%;display:block}
 
     .container{width:min(1100px, 92%); margin-inline:auto}
+    .content{
+      width: 100%;
+    }
     header{
       position:sticky; 
       top:0; 
@@ -178,14 +181,17 @@
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap:14px;
       }
-      .btn{padding:8px 12px; font-size:14px}
-      .project .content{padding:12px}
+      .btn{padding:8px 12px; font-size:14px;}
+      .project .content{padding:12px;}
       .card{
        display: flex;
        flex-direction: column; 
        justify-content: center;
        align-items: center;
+       
       }
+      
+
     }
 
     /* Ajustes Responsive estrictos <= 400px para iphone (mi telefono xd)*/
@@ -197,7 +203,7 @@
       .hero h1{font-size:clamp(22px, 7vw, 30px)}
       section h2{font-size:clamp(18px, 5.5vw, 24px)}
       .projects{grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))}
-      .btn, .btn-primary{padding:9px 12px; font-size:14px}
+      .btn, .btn-primary{padding:9px 12px; font-size:14px;}
       .tag{font-size:11px; padding:5px 8px}
       
     }
