@@ -80,7 +80,6 @@
     }
     .card:hover{
       box-shadow: 0 0 5px rgba(255, 255, 255, 0.438);
-      transform: scale(1.01);
     }
 
     /* Sobre mí */
@@ -107,13 +106,20 @@
       padding:10px 12px; border-radius:14px; background:#161a34;
       border:1px solid rgba(255,255,255,.06);
       width: auto;
-      
+      transition: 0.1s ease-in-out;
     }
     .skill img{
       width:35px; height:100%; object-fit:contain; border-radius:6px; background:#0f1221;
       padding:4px; border:1px solid rgba(255,255,255,.05);
     }
     .skill span{font-size:14px}
+
+    .skill:hover{
+      box-shadow: 0 0 3px rgb(124, 100, 255),
+      0 0 6px rgb(33, 14, 141),
+      0 0 9px rgb(45, 23, 167),
+      0 0 12px rgb(38, 0, 255);
+    }
 
     /* Proyectos */
     .projects{
@@ -126,7 +132,7 @@
     }
     .project:hover{
       transform:translateY(-4px);
-      box-shadow:0 14px 50px rgba(124,92,255,.2);
+      box-shadow:0 14px 50px rgba(159, 107, 255, 0.2);
     }
     .project .thumb{
       aspect-ratio:16/9; background:#0b0e1e; overflow:hidden;
