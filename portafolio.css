@@ -35,6 +35,7 @@
       background: linear-gradient(180deg, rgba(15,18,33,.9), rgba(15,18,33,.6));
       border-bottom:1px solid rgba(255,255,255,.06);
     }
+    
     .nav{
       display:flex; align-items:center; justify-content:space-between; padding:14px 0;
       gap:8px;
@@ -78,9 +79,7 @@
       box-shadow:0 10px 40px rgba(0,0,0,.25);
       transition: 0.2s ease-in-out;
     }
-    .card:hover{
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.438);
-    }
+    
 
     /* Sobre mí */
     .about{display:grid; gap:14px}
@@ -114,7 +113,7 @@
     }
     .skill span{font-size:14px}
 
-    .skill:hover{
+    .skill:hover,.me:hover{
       box-shadow: 0 0 3px rgb(124, 100, 255),
       0 0 6px rgb(33, 14, 141),
       0 0 9px rgb(45, 23, 167),
@@ -213,3 +212,17 @@
       .tag{font-size:11px; padding:5px 8px}
       
     }
+
+  @keyframes parpadeo {
+    0%, 100% {
+      box-shadow: 0 0 0px rgba(49, 20, 161, 0);
+    }
+    50% {
+      box-shadow: 0 0 18px rgba(49, 20, 161);
+    }
+  }
+
+  #joeimg{
+    animation: parpadeo 3s ease-in-out infinite;
+    border: 5px solid #30335e;
+  }
