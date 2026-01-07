@@ -218,11 +218,11 @@
       box-shadow: 0 0 0px rgba(49, 20, 161, 0);
     }
     50% {
-      box-shadow: 0 0 18px rgba(49, 20, 161);
+      box-shadow: 0 0 20px rgba(49, 20, 161);
     }
   }
 
   #joeimg{
     animation: parpadeo 3s ease-in-out infinite;
-    border: 5px solid #30335e;
+    
   }
