@@ -215,10 +215,10 @@
 
   @keyframes parpadeo {
     0%, 100% {
-      box-shadow: 0 0 0px rgba(49, 20, 161, 0);
+      box-shadow: 0 0 0px rgba(161, 20, 20, 0);
     }
     50% {
-      box-shadow: 0 0 20px rgba(49, 20, 161);
+      box-shadow: 0 0 20px rgb(161, 20, 20);
     }
   }
 
