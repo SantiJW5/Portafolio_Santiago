@@ -108,7 +108,7 @@
       border:1px solid rgba(255,255,255,.06);
       width: auto;
       transition: 0.1s ease-in-out;
-      box-shadow: 0 0 1em black;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.61);
     }
     .skill img{
       width:35px; height:100%; object-fit:contain; border-radius:6px; background:#0f1221;
